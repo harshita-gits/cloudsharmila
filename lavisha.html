@@ -1,0 +1,127 @@
+<!-- Bootstrap and Charts.js -->
+<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+<script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
+
+<div class="container mt-5">
+    <h1 class="text-center text-primary fw-bold display-4">Cloud Deployment Comparative Analysis</h1>
+    <p class="text-center lead">A detailed comparison of AWS, GCP, and Azure based on services, performance, and advantages.</p>
+
+    <!-- Creative Comparison Table -->
+    <div class="table-responsive mt-4">
+        <table class="table table-bordered text-center align-middle" style="border: 3px solid black; font-size: 1.2rem;">
+            <thead class="table-dark" style="font-size: 1.4rem;">
+                <tr>
+                    <th>Cloud Provider</th>
+                    <th>Deployment Service</th>
+                    <th>Response Time (ms)</th>
+                    <th>Deployment Ease</th>
+                    <th>URL</th>
+                    <th>Network Latency (ms)</th>
+                    <th>Uptime (%)</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr style="background-color: #FFEBCC;">
+                    <td><img src="data:image/png;base64,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" width="50"> <strong>AWS</strong></td>
+                    <td>Elastic Beanstalk</td>
+                    <td id="aws-time" class="fw-bold text-danger">Loading...</td>
+                    <td class="text-success">Easy</td>
+                    <td><a href="#" class="btn btn-primary btn-sm">View</a></td>
+                    <td id="aws-latency"></td>
+                    <td id="aws-uptime"></td>
+                </tr>
+                <tr style="background-color: #E3F2FD;">
+                    <td><img src="data:image/png;base64,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" width="50"> <strong>GCP</strong></td>
+                    <td>App Engine</td>
+                    <td id="gcp-time" class="fw-bold text-danger">Loading...</td>
+                    <td class="text-warning">Medium</td>
+                    <td><a href="#" class="btn btn-warning btn-sm">View</a></td>
+                    <td id="gcp-latency"></td>
+                    <td id="gcp-uptime"></td>
+                </tr>
+                <tr style="background-color: #E8F5E9;">
+                    <td><img src="data:image/jpeg;base64,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" width="50"> <strong>Azure</strong></td>
+                    <td>App Service</td>
+                    <td id="azure-time" class="fw-bold text-danger">Loading...</td>
+                    <td class="text-success">Easy</td>
+                    <td><a href="#" class="btn btn-info btn-sm">View</a></td>
+                    <td id="azure-latency"></td>
+                    <td id="azure-uptime"></td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+
+    <div class="comparison-container" style="text-align: center;">
+        <h2>Response Time Comparison</h2>
+        <canvas id="performanceChart"></canvas>
+    
+        <h2>Ease of Deployment</h2>
+        <canvas id="deploymentChart"></canvas>
+    
+        <h2>Network Latency Comparison</h2>
+        <canvas id="latencyChart"></canvas>
+    
+        <h2>Uptime Comparison</h2>
+        <canvas id="uptimeChart"></canvas>
+    </div>
+
+    <!-- Cloud Provider Detailed Explanation -->
+    <h2 class="mt-5 text-center text-primary fw-bold">Cloud Provider Breakdown</h2>
+    
+    <div class="row mt-4">
+        <!-- AWS Section -->
+        <div class="col-md-12 p-4 border rounded" style="background-color: #FFEBCC;">
+            <h3 class="fw-bold text-danger">Amazon Web Services (AWS)</h3>
+            <p>AWS provides a comprehensive cloud solution with Elastic Beanstalk, which offers an easy deployment process with auto-scaling and load balancing.</p>
+            <h4 class="fw-bold">Services & Benefits</h4>
+            <ul>
+                <li>✔ Scalable and cost-effective solutions</li>
+                <li>✔ Wide range of services and integrations</li>
+                <li>✔ Global availability with high reliability</li>
+            </ul>
+            <div class="row mt-3">
+                <div class="col-md-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQI0U0TyeeSng0FEzc_HT0Vt-VJd_o46wrleQ&s" class="img-fluid rounded"></div>
+                <div class="col-md-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQD0GTnrmCkA0xqXRj8JM01_RPI_no1dtwZOw&s" class="img-fluid rounded"></div>
+                <div class="col-md-4"><img src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ-K4rIc5agxAnr6iGPr60dq7c2qIZvWp0mlg&s" class="img-fluid rounded"></div>
+            </div>
+        </div>
+
+        <!-- GCP Section -->
+        <div class="col-md-12 p-4 border rounded mt-4" style="background-color: #E3F2FD;">
+            <h3 class="fw-bold text-primary">Google Cloud Platform (GCP)</h3>
+            <p>GCP offers Google App Engine, an auto-scaling platform with built-in security and fast deployment.</p>
+            <h4 class="fw-bold">Services & Benefits</h4>
+            <ul>
+                <li>✔ AI/ML capabilities integrated</li>
+                <li>✔ Fast and secure networking</li>
+                <li>✔ Cost-effective pricing models</li>
+            </ul>
+            <div class="row mt-3">
+                <div class="col-md-4"><img src="gcp2.png" class="img-fluid rounded"></div>
+                <div class="col-md-4"><img src="gcp3.png" class="img-fluid rounded"></div>
+                <div class="col-md-4"><img src="gcp4.jpg" class="img-fluid rounded"></div>
+            </div>
+        </div>
+
+        <!-- Azure Section -->
+        <div class="col-md-12 p-4 border rounded mt-4" style="background-color: #E8F5E9;">
+            <h3 class="fw-bold text-success">Microsoft Azure</h3>
+            <p>Azure App Service provides an easy and secure cloud solution with enterprise-grade security and support.</p>
+            <h4 class="fw-bold">Services & Benefits</h4>
+            <ul>
+                <li>✔ Enterprise-grade security</li>
+                <li>✔ Hybrid cloud capabilities</li>
+                <li>✔ Built-in DevOps and CI/CD</li>
+            </ul>
+            <div class="row mt-3">
+                <div class="col-md-4"><img src="azure1.webp" class="img-fluid rounded"></div>
+                <div class="col-md-4"><img src="azure2.png" class="img-fluid rounded"></div>
+                <div class="col-md-4"><img src="azure3.jpg" class="img-fluid rounded"></div>
+            </div>
+        </div>
+    </div>
+</div>
+
+<!-- Custom Script -->
+<script src="{{ url_for('static', filename='lavisha.js') }}"></script>

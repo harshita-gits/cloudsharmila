@@ -1,0 +1,296 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Public Cloud Services Comparison</title>
+  <style>
+    body {
+      font-family: 'Arial', sans-serif;
+      background-color: #f9f9f9;
+      color: #333;
+      margin: 0;
+      padding: 0;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 50px auto;
+      padding: 20px;
+      background: #fff;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+    }
+
+    h1 {
+      text-align: center;
+      color: #2c3e50;
+      font-size: 2.5rem;
+      margin-bottom: 20px;
+    }
+
+    table {
+      width: 100%;
+      border-collapse: collapse;
+      margin-bottom: 20px;
+    }
+
+    th, td {
+      padding: 15px;
+      text-align: left;
+      border-bottom: 1px solid #ddd;
+    }
+
+    th {
+      background-color: #2c3e50;
+      color: #fff;
+      font-weight: bold;
+    }
+
+    tr:hover {
+      background-color: #f1f1f1;
+    }
+
+    .provider-logo {
+      width: 30px;
+      height: auto;
+      vertical-align: middle;
+      margin-right: 10px;
+    }
+
+    .feature-category {
+      background-color: #e9ecef;
+      font-weight: bold;
+    }
+
+    .redirect-link {
+      text-align: center;
+      font-weight: bold;
+      color: #2c3e50;
+      text-decoration: none;
+      display: block;
+      padding: 10px 0;
+    }
+
+    .redirect-link:hover {
+      text-decoration: underline;
+    }
+
+    /* Fix alignment for the last row */
+    .redirect-row td {
+      text-align: center;
+      padding: 10px 0;
+    }
+
+    @media (max-width: 768px) {
+      table, thead, tbody, th, td, tr {
+        display: block;
+      }
+
+      th {
+        position: absolute;
+        top: -9999px;
+        left: -9999px;
+      }
+
+      tr {
+        margin-bottom: 10px;
+        border: 1px solid #ddd;
+      }
+
+      td {
+        border: none;
+        position: relative;
+        padding-left: 50%;
+        text-align: left;
+      }
+
+      td:before {
+        position: absolute;
+        left: 10px;
+        width: 45%;
+        padding-right: 10px;
+        white-space: nowrap;
+        content: attr(data-label);
+        font-weight: bold;
+      }
+
+      .redirect-row td {
+        text-align: left;
+        padding-right: 10px;
+        padding-left: 0;
+      }
+
+      .redirect-row td:before {
+        content: none;
+        text-align: left;
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="container">
+    <h1>Public Cloud Services Comparison</h1>
+    <table>
+      <thead>
+        <tr>
+          <th>Comparison Criteria</th>
+          <th>
+            <img src="azure.png" alt="Azure" class="provider-logo">
+            Azure
+          </th>
+          <th>
+            <img src="gcp.png" alt="GCP" class="provider-logo">
+            GCP
+          </th>
+          <th>
+            <img src="aws.webp" alt="AWS" class="provider-logo">
+            AWS
+          </th>
+        </tr>
+      </thead>
+    <tbody>
+        <tr class="feature-category">
+          <td colspan="4">Compute Services</td>
+        </tr>
+        <tr>
+          <td>Virtual Machines</td>
+          <td>Azure VMs</td>
+          <td>Compute Engine</td>
+          <td>EC2</td>
+        </tr>
+        <tr>
+            <td>Serverless Computing</td>
+            <td>Azure Functions</td>
+            <td>Cloud Functions</td>
+            <td>AWS Lambda</td>
+        </tr>
+        <tr class="feature-category">
+            <td colspan="4">Storage Services</td>
+        </tr>
+        <tr>
+            <td>Object Storage</td>
+            <td>Azure Blob Storage</td>
+            <td>Cloud Storage</td>
+            <td>S3</td>
+        </tr>
+        <tr>
+            <td>Block Storage</td>
+            <td>Azure Disk Storage</td>
+            <td>Persistent Disk</td>
+            <td>EBS</td>
+        </tr>
+    
+        <tr class="feature-category">
+            <td colspan="4">Networking</td>
+        </tr>
+        <tr>
+            <td>Content Delivery</td>
+            <td>Azure CDN</td>
+            <td>Cloud CDN</td>
+            <td>CloudFront</td>
+        </tr>
+        <tr>
+            <td>Load Balancer</td>
+            <td>Azure Load Balancer</td>
+            <td>Cloud Load Balancing</td>
+            <td>ELB</td>
+        </tr>
+    
+        <tr class="feature-category">
+            <td colspan="4">Databases</td>
+        </tr>
+        <tr>
+            <td>Relational Database</td>
+            <td>Azure SQL Database</td>
+            <td>Cloud SQL</td>
+            <td>RDS</td>
+        </tr>
+        <tr>
+            <td>NoSQL Database</td>
+            <td>Cosmos DB</td>
+            <td>Firestore</td>
+            <td>DynamoDB</td>
+        </tr>
+    
+        <tr class="feature-category">
+            <td colspan="4">AI/ML Services</td>
+        </tr>
+        <tr>
+            <td>Machine Learning</td>
+            <td>Azure Machine Learning</td>
+            <td>AI Platform</td>
+            <td>SageMaker</td>
+        </tr>
+        <tr>
+            <td>AI APIs</td>
+            <td>Azure Cognitive Services</td>
+            <td>Cloud AI</td>
+            <td>Rekognition, Polly, etc.</td>
+        </tr>
+    
+        <tr class="feature-category">
+            <td colspan="4">Security</td>
+        </tr>
+        <tr>
+            <td>Identity & Access Management</td>
+            <td>Azure Active Directory</td>
+            <td>Cloud IAM</td>
+            <td>AWS IAM</td>
+        </tr>
+        <tr>
+            <td>Encryption</td>
+            <td>Azure Key Vault</td>
+            <td>Cloud KMS</td>
+            <td>AWS KMS</td>
+        </tr>
+    
+        <tr class="feature-category">
+            <td colspan="4">Pricing</td>
+        </tr>
+        <tr>
+            <td>Pay-as-you-go</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>Free Tier</td>
+            <td>12 months free</td>
+            <td>Always Free tier</td>
+            <td>12 months free</td>
+        </tr>
+    
+        <tr class="feature-category">
+            <td colspan="4">Support</td>
+        </tr>
+        <tr>
+            <td>24/7 Support</td>
+            <td>Available</td>
+            <td>Available</td>
+            <td>Available</td>
+        </tr>
+        <tr>
+            <td>SLAs</td>
+            <td>99.9% uptime</td>
+            <td>99.95% uptime</td>
+            <td>99.9% uptime</td>
+        </tr>
+    
+        <tr class="redirect-row">
+            <td></td>
+            <td>
+                <a href="https://azure.microsoft.com" target="_blank" class="redirect-link">Learn More about Azure</a>
+            </td>
+            <td>
+                <a href="https://cloud.google.com" target="_blank" class="redirect-link">Learn More about GCP</a>
+            </td>
+            <td>
+                <a href="https://aws.amazon.com" target="_blank" class="redirect-link">Learn More about AWS</a>
+            </td>
+        </tr>
+      </tbody>
+    </table>
+  </div>
+</body>
+</html>
