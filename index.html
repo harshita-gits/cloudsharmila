@@ -1,0 +1,233 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Fraud Detection System</title>
+    <!--<link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>-->
+    <link rel="stylesheet" href="homepage.css">
+
+</head>
+<body>
+
+    <script>
+        (function() {
+    // Load Bootstrap CSS
+    const bootstrapCSS = document.createElement("link");
+    bootstrapCSS.rel = "stylesheet";
+    bootstrapCSS.href = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css";
+    document.head.appendChild(bootstrapCSS);
+
+    // Load Bootstrap JS
+    const bootstrapJS = document.createElement("script");
+    bootstrapJS.src = "https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js";
+    bootstrapJS.defer = true;
+    document.body.appendChild(bootstrapJS);
+
+    // Load jQuery (Optional)
+    const jqueryScript = document.createElement("script");
+    jqueryScript.src = "https://code.jquery.com/jquery-3.6.0.min.js";
+    jqueryScript.defer = true;
+    document.body.appendChild(jqueryScript);
+})();
+
+document.addEventListener("DOMContentLoaded", function () {
+    const button = document.querySelector(".dropdown-btn");
+    const contentDiv = document.getElementById("comparison-content");
+
+    button.addEventListener("click", function () {
+        // Check if content is already loaded
+        if (!contentDiv.innerHTML) {
+            fetch("comparison.html") // Load from external file
+                .then((response) => response.text())
+                .then((data) => {
+                    contentDiv.innerHTML = data;
+                    contentDiv.classList.add("show"); // Apply animation
+                })
+                .catch((error) => console.error("Error loading content:", error));
+        } else {
+            // Toggle visibility
+            contentDiv.classList.toggle("show");
+        }
+    });
+});
+
+    </script>
+    <nav class="navbar navbar-expand-lg navbar-light bg-light">
+        <div class="container-fluid">
+            <a class="navbar-brand" href="#">FraudDete</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item dropdown">
+                        <a class="nav-link dropdown-toggle" href="#" id="teamDropdown" role="button" data-bs-toggle="dropdown">Team Members</a>
+                        <ul class="dropdown-menu">
+                            <li><a class="dropdown-item" href="#">Harshita Kumari</a></li>
+                            <li><a class="dropdown-item" href="#">Lavisha Keshwani</a></li>
+                            <li><a class="dropdown-item" href="#">Loveena Batra</a></li>
+                        </ul>
+                    </li>
+                    <li class="nav-item"><a class="nav-link" href="#">Project</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#">Develop</a></li>
+                    <li class="nav-item"><a class="nav-link" href="login.html">Login</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Image Slider -->
+    <div id="carouselExample" class="carousel slide" data-bs-ride="carousel">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img src="img1.jpeg" class="d-block w-100" alt="Slide 1">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2>Credit Card Fraud Detection System</h2>
+                    <p>Secure image analysis for fraud detection</p>
+                </div>
+            </div>
+
+            <div class="carousel-item">
+                <img src="loginbg2.jpg" class="d-block w-100" alt="Slide 2">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2>AI-Powered Security</h2>
+                    <p>Detect fraudulent transactions in real-time using machine learning algorithms.</p>
+                </div>
+            </div>
+            <div class="carousel-item">
+                <img src="loginbg3.jpg" class="d-block w-100" alt="Slide 3">
+                <div class="carousel-caption d-flex flex-column justify-content-center align-items-center">
+                    <h2>Secure and Reliable Payments</h2>
+                    <p>Enhance security in digital payments with advanced fraud detection mechanisms.</p>
+                </div>
+            </div>
+        </div>
+        <button class="carousel-control-prev" type="button" data-bs-target="#carouselExample" data-bs-slide="prev">
+            <span class="carousel-control-prev-icon"></span>
+        </button>
+        <button class="carousel-control-next" type="button" data-bs-target="#carouselExample" data-bs-slide="next">
+            <span class="carousel-control-next-icon"></span>
+        </button>
+    </div>
+
+    <section class="team-section">
+        <h2 class="section-title">Team Members</h2>
+        <div class="team-container">
+            <div class="team-card">Harshita Kumari</div>
+            <div class="team-card">Lavisha Keshwani</div>
+            <div class="team-card">Loveena Batra</div>
+        </div>
+    </section>
+
+    <!-- Mentor Section -->
+    <section class="mentor-section">
+        <h2 class="section-title">Mentor</h2>
+        <div class="mentor-card">Dr. Sharmiladevi S</div>
+    </section>
+
+    <!--Project overview-->
+    <section class="project-overview">
+        <h2>Project Overview- Real Time Credit Card Fraud Detection</h2>
+        <p>Our project focuses on real-time fraud detection using machine learning, cloud computing, and web technologies. It aims to analyze financial transactions in real-time to identify fraudulent activities while also comparing the performance of different cloud platforms (AWS, GCP, and Azure). This combination of AI-powered fraud detection and cloud performance benchmarking provides valuable insights for secure and efficient financial systems.</p>
+        <h3><b>Cloud Services Integration</b></h3>
+        <p>To enhance efficiency and reliability, we leverage multiple cloud platforms. Amazon S3 is used to store fraud detection logs, datasets, and trained model files. Amazon SNS (Simple Notification Service) is integrated to send real-time alerts whenever fraudulent activities are detected. Additionally, we use AWS Lambda, GCP Cloud Functions, and Azure Functions to execute fraud detection tasks in a serverless environment. For transactional data storage, Cloud SQL services (AWS RDS, GCP BigQuery, and Azure SQL) are utilized.</p>
+            <div class="overview-cards">
+            <div class="overview-card">Data Collection and Preprocessing</div>
+            <div class="overview-card">Model Development</div>
+            <div class="overview-card">Cloud Deployment on Various Platforms</div>
+            <div class="overview-card">Real-Time Data Streaming & Processing</div>
+            <div class="overview-card">Performance Analysis & Alerts</div>
+        </div>
+
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+        <p></p>
+
+        <div class="overview-images">
+            <img src="overview1.jpeg" alt="Image 1">
+            <img src="overview2.jpeg" alt="Image 2">
+        </div>
+    </section>
+    <p></p>
+    <p></p>
+    <p></p>
+
+
+    <h2 style="color: rgb(2, 2, 104); font-size: 45px; font-weight: bold; text-align: center; margin-bottom: 20px;">
+        About the Cloud Services Used
+    </h2>
+    
+    <!-- Flash Cards -->
+    <div class="container my-5">
+        <div class="row">
+            <div class="col-md-4">
+                <div class="flash-card">
+                    <img src="https://via.placeholder.com/40" alt="GCP">
+                    <div class="card-content">
+                        <h3>Google Cloud</h3>
+                        <p>Secure cloud computing and AI solutions.</p>
+                        <p>Public cloud computing service offered by Google. It has multiple services example – computing, Storage, Networking, Big data, Developer Tools, IOT, Cloud AI, Data Transfer, Identity & Security. </p>
+                        <a href="#">Detailed Analysis →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flash-card">
+                    <img src="https://via.placeholder.com/40" alt="AWS">
+                    <div class="card-content">
+                        <h3>AWS</h3>
+                        <p>Scalable cloud storage and infrastructure.</p>
+                        <p> AWS is a cloud service platform offered by Amazon. The benefits of AWS has flexibility, cost-effectiveness, scalability, and security. It offers over 200 fully featured services.</p>
+                        <a href="#">Detailed Analysis →</a>
+                    </div>
+                </div>
+            </div>
+            <div class="col-md-4">
+                <div class="flash-card">
+                    <img src="https://via.placeholder.com/40" alt="Azure">
+                    <div class="card-content">
+                        <h3>Azure</h3>
+                        <p>Enterprise-grade cloud solutions.</p>
+                        <p>Azure is the Microsoft cloud solution. It contains all different types of services whether you need a VM, a big or small website, to run a database or your container, or just some kind of Server support. </p>
+                        <a href="#">Detailed Analysis →</a>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <section class="comparison-section">
+        <h2 class="comparison-heading">Comparison between different cloud services</h2>
+        <button class="dropdown-btn">▼ Show Comparison</button>
+        <div class="dropdown-content" id="comparison-content"></div>
+    </section>
+
+    <div class="model-container">
+        <div class="model-content">
+            <h2>Model Development</h2>
+            <p>The fraud detection model is built using supervised and unsupervised learning techniques. The process involves:</p>
+            <ul>
+                <li><strong>Feature Engineering:</strong> Extracting meaningful insights from transaction data.</li>
+                <li><strong>Training the Model:</strong> Utilizing classification algorithms like Random Forest and Neural Networks.</li>
+                <li><strong>Testing & Evaluation:</strong> Validating model accuracy with Precision, Recall, and F1 Score.</li>
+                <li><strong>Deployment & Monitoring:</strong> Implementing the model on cloud platforms for real-time fraud detection.</li>
+            </ul>
+        </div>
+        <div class="check-now-btn">
+            <a href="form.html"> Check Now!!</a>
+        </div>
+        
+    </div>
+    
+    <!-- Footer -->
+    <footer class="footer">
+        <p>© 2025 FraudDete. All Rights Reserved.</p>
+    </footer>
+    
+</body>
+</html>
